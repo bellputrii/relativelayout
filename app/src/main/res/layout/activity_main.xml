@@ -1,6 +1,7 @@
-<?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="16dp"
@@ -16,26 +17,24 @@
         android:text="@string/_song_title"
         android:textColor="@color/yellow"
         android:textSize="23sp"
-        android:textStyle="bold"/>
+        android:textStyle="bold" />
 
-    <TextView
-        android:id="@+id/txt_navigate"
+    <ImageView
+        android:id="@+id/img_navigate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="23dp"
         android:layout_marginLeft="40dp"
-        android:drawableLeft="@drawable/navigate_before"
-        />
+        android:src="@drawable/navigate_before" />
 
-    <TextView
-        android:id="@+id/txt_more_vert"
-        android:layout_marginTop="23dp"
+    <ImageView
+        android:id="@+id/img_more_vert"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="23dp"
         android:layout_marginRight="40dp"
         android:layout_alignParentEnd="true"
-        android:drawableRight="@drawable/more_vert"
-        />
+        android:src="@drawable/more_vert" />
 
     <ImageView
         android:id="@+id/img_song"
@@ -47,15 +46,15 @@
         android:layout_centerHorizontal="true"
         android:importantForAccessibility="no" />
 
-    <ImageView
+    <SeekBar
         android:id="@+id/line"
-        android:layout_width="300dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="50dp"
-        android:layout_below="@id/img_song"
-        android:src="@drawable/line"
-        android:importantForAccessibility="no" />
+        android:progress="20"
+        android:layout_marginTop="450dp"
+        android:progressTint="@color/orange"
+        android:thumbTint="@color/white"
+        android:backgroundTint="@color/yellow" />
 
     <TextView
         android:id="@+id/artist"
@@ -70,24 +69,6 @@
         android:textStyle="bold" />
 
     <TextView
-        android:id="@+id/ellipse_1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/img_song"
-        android:layout_marginLeft="41dp"
-        android:layout_marginTop="40dp"
-        android:drawableLeft="@drawable/ellipse_1" />
-
-    <TextView
-        android:id="@+id/ellipse_2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/img_song"
-        android:layout_marginLeft="48dp"
-        android:layout_marginTop="43dp"
-        android:drawableLeft="@drawable/ellipse_2" />
-
-    <TextView
         android:id="@+id/song_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -99,39 +80,41 @@
         android:textSize="23sp"
         android:textStyle="bold" />
 
-    <TextView
-        android:id="@+id/skip_next"
+
+    <ImageView
+        android:id="@+id/img_skip_next"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/song_title"
         android:layout_marginTop="40dp"
         android:layout_marginLeft="250dp"
-        android:drawableLeft="@drawable/icon_next" />
+        android:src="@drawable/icon_next" />
 
-    <TextView
-        android:id="@+id/skip_previous"
+    <ImageView
+        android:id="@+id/img_skip_previous"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/song_title"
         android:layout_marginTop="40dp"
         android:layout_marginLeft="100dp"
-        android:drawableLeft="@drawable/icon_previous" />
-    <TextView
-        android:id="@+id/ellipse_3"
+        android:src="@drawable/icon_previous" />
+
+    <ImageView
+        android:id="@+id/img_ellipse"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/song_title"
         android:layout_marginTop="35dp"
         android:layout_marginLeft="168dp"
-        android:drawableLeft="@drawable/ellipse_3" />
+        android:src="@drawable/ellipse_3" />
 
-    <TextView
-        android:id="@+id/play"
+    <ImageView
+        android:id="@+id/img_play"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/song_title"
         android:layout_marginTop="45dp"
         android:layout_marginLeft="182dp"
-        android:drawableLeft="@drawable/icon_play" />
+        android:src="@drawable/icon_play" />
 
 </RelativeLayout>
